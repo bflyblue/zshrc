@@ -1,0 +1,9 @@
+if [[ $(ls --version 2> /dev/null) == ((*GNU*)|(*fileutils*)|(*coreutils*)) ]] ; then
+	alias ls='ls --color=auto'
+elif [[ -x $(which gls) ]] && [[ $(gls --version) == ((*GNU*)|(*fileutils*)|(*coreutils*)) ]] ; then
+	alias ls='gls --color=auto'
+fi
+
+if echo zsh | grep --color=auto zsh > /dev/null 2>&1 ; then
+	alias grep='grep --color=auto'
+fi

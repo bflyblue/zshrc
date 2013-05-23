@@ -1,0 +1,10 @@
+autoload -Uz vcs_info
+precmd () { vcs_info }
+setopt promptsubst
+RPS1='${vcs_info_msg_0_}'
+zstyle ':vcs_info:*' enable hg git svn cvs
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' get-bookmarks true
+zstyle ':vcs_info:*' branchformat %b@%r
+zstyle ':vcs_info:*' hgrevformat %r
+zstyle ':vcs_info:*' formats '(%F{green}%s:%F{yellow}%b.%m%f)'
