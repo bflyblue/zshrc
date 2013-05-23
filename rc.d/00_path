@@ -1,2 +1,2 @@
 typeset -U path
-path=(~/.local/bin ~/.cabal/bin $path)
+path=(~/bin ~/.rvm/bin ~/.cabal/bin ~/Library/Python/2.7/bin /opt/local/bin /opt/local/sbin /opt/local/libexec/gnubin $path)
