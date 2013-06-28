@@ -1,2 +1,2 @@
 typeset -U path
-path=(~/.local/bin ~/.cabal/bin $path)
+path=(~/.local/bin ~/.cabal/bin ~/.rvm/bin ~/node_modules/.bin $path)
