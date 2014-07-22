@@ -7,3 +7,7 @@ fi
 if echo zsh | grep --color=auto zsh > /dev/null 2>&1 ; then
 	alias grep='grep --color=auto'
 fi
+
+alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
+alias ghci-sandbox="ghci -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
+alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
