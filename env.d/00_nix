@@ -1,0 +1,11 @@
+# added by Nix installer
+
+if [ -e /Users/shaun/.nix-profile/etc/profile.d/nix.sh ]
+then
+  . /Users/shaun/.nix-profile/etc/profile.d/nix.sh
+fi
+
+# export NIX_PATH=/Users/shaun
+export OPENSSL_X509_CERT_FILE=~/.nix-profile/etc/ca-bundle.crt
+export GIT_SSL_CAINFO=~/.nix-profile/etc/ca-bundle.crt
+export CURL_CA_BUNDLE=~/.nix-profile/etc/ca-bundle.crt
