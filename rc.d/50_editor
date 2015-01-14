@@ -1,3 +1,3 @@
 # Editor
-VISUAL=/usr/bin/vim
-EDITOR=/usr/bin/vim
+VISUAL=vim
+EDITOR=vim
