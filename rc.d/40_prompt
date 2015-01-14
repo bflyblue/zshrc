@@ -1,5 +1,6 @@
 autoload colors; colors
-PS1="%(!.%F{red}.%F{green})despina %F{yellow}%~ %#%f "
-if [[ "$ENV" != "" ]] then
-	PS1="%F{blue}${ENV}|$PS1"
+if [[ "$ENV" == "" ]] then
+	PS1="%(!.%F{red}.%F{green})despina %F{yellow}%~ %#%f "
+else
+	PS1="%F{blue}${ENV}|%(!.%F{red}.%F{green})despina %F{yellow}%~ %#%f "
 fi
