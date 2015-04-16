@@ -1,2 +1,0 @@
-path=(/opt/local/lib/postgresql92/bin $path)
-PGDATA=/opt/local/var/db/postgresql92/defaultdb

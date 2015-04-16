@@ -1,2 +1,16 @@
-typeset -U path
-path=(~/bin ~/.rvm/bin ~/.cabal/bin ~/Library/Python/2.7/bin /opt/local/bin /opt/local/sbin /opt/local/libexec/gnubin $path)
+typeset -U path syspath nixpath
+
+path=(~/bin /opt/local/bin /opt/local/sbin /opt/local/libexec/gnubin $path)
+
+# Give nix preference to system
+for p in $path
+do
+  if [[ $p =~ "/nix.*" ]]
+  then
+    nixpath+=($p)
+  else
+    syspath+=($p)
+  fi
+done
+
+path=($nixpath $syspath)

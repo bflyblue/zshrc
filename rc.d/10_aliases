@@ -11,6 +11,6 @@ fi
 alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
 alias ghci-sandbox="ghci -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
 alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
-alias nsh='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh"'
-alias ush='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -I ~'
+alias nsh='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j4'
+alias ush='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j4 -I ~'
 alias ubuild='nix-build -I ~'
