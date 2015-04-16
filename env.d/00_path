@@ -1,2 +1,2 @@
 typeset -U path
-path=(/usr/local/bin $path)
+path=(/usr/local/bin $HOME/.nix-profile/bin $path)
