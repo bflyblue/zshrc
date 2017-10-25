@@ -1,6 +1,7 @@
 autoload colors; colors
+# PS1="%(!.%F{red}.%F{green})%m %F{yellow}%~ %#%f "
+PS1="%(!.%F{red}.%F{green})%m %F{yellow}%~ %(?.%F{yellow}%#.%F{red}!)%f "
 if [[ "$ENV" == "" ]] then
-	PS1="%(!.%F{red}.%F{green})%m %F{yellow}%~ %#%f "
 else
-	PS1="%F{blue}${ENV}|%(!.%F{red}.%F{green})%m %F{yellow}%~ %#%f "
+	PS1="%F{blue}${ENV}|$PS1"
 fi
