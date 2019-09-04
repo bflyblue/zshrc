@@ -1,7 +1,11 @@
 autoload colors; colors
-# PS1="%(!.%F{red}.%F{green})%m %F{yellow}%~ %#%f "
-PS1="%(!.%F{red}.%F{green})%m %F{yellow}%~ %(?.%F{yellow}%#.%F{red}!)%f "
+export P_HOST="%(!.%F{red}.%F{green})%m"
+export P_PATH="%F{yellow}%~"
+export P_STATUS="%(?.%F{yellow}%#.%F{red}!)%f"
 if [[ "$ENV" == "" ]] then
+	export P_ENV=""
 else
-	PS1="%F{blue}${ENV}|$PS1"
+	export P_ENV="%F{blue}${ENV}|"
 fi
+PS1="$P_ENV$P_HOST $P_PATH $P_STATUS "
+setopt promptsubst promptsp

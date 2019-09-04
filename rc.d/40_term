@@ -2,3 +2,7 @@ case "$COLORTERM" in
   gnome-terminal) export TERM="xterm-256color" ;;
   xfce4-terminal) export TERM="xfce" ;;
 esac
+
+case "$TERM" in
+  xst-256color) export TERM="xterm-256color" ;;
+esac

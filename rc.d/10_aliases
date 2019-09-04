@@ -8,9 +8,12 @@ if echo zsh | grep --color=auto zsh > /dev/null 2>&1 ; then
 	alias grep='grep --color=auto'
 fi
 
-alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
-alias ghci-sandbox="ghci -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
-alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
-alias nsh='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j4'
-alias ush='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j4 -I ~'
+alias nsh='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j8'
 alias htags='hasktags -c --ignore-close-implementation -x .'
+
+alias gs='git status'
+alias gl='git log --all --graph --decorate'
+alias gf='git fetch --prune --tags'
+alias gco='git checkout'
+alias gpl='git pull'
+alias gps='git push'
