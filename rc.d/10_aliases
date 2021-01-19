@@ -12,8 +12,19 @@ alias nsh='nix-shell --command "ENV=`pwd | sed "s/.*\///"` zsh" -j8'
 alias htags='hasktags -c --ignore-close-implementation -x .'
 
 alias gs='git status'
-alias gl='git log --all --graph --decorate'
+alias gl='git log --graph --decorate'
+alias gla='git log --all --graph --decorate'
 alias gf='git fetch --prune --tags'
 alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
+alias gb='git branch'
+alias gd='git diff'
+fco () {
+  if [ -n "$1" ]
+  then 
+    gco $(gb | fzf -1 -q $1)
+  else
+    gco $(gb | fzf)
+  fi
+}
