@@ -1,0 +1,7 @@
+hash -d -- mpowered=~/devel/mpowered
+hash -d -- mpowered-services=~/devel/mpowered/mpowered-services
+hash -d -- toolkit=~/devel/mpowered/mpowered-services/applications/toolkit
+hash -d -- sms=~/devel/mpowered/mpowered-services/applications/sms
+hash -d -- beagle=~/devel/mpowered/mpowered-services/applications/beagle
+hash -d -- chameleon=~/devel/mpowered/mpowered-services/applications/chameleon
+hash -d -- lodjur=~/devel/mpowered/lodjur
